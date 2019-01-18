@@ -4,18 +4,18 @@ import { Layout, Menu, Icon } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
 
 export default function MainLayout(props) {
-  console.log(props);
+  // console.log(props);
   return (
-    <Layout>
+    <Layout style={{ height: "100vh" }}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={broken => {
-          console.log("broken", broken);
+          // console.log("broken", broken);
         }}
         onCollapse={(collapsed, type) => {
           props.onSiderChange(collapsed);
-          console.log("cc", collapsed, type);
+          // console.log("cc", collapsed, type);
         }}
       >
         <div className="logo" />
@@ -44,7 +44,6 @@ export default function MainLayout(props) {
       <Layout>
         <Header style={{ background: "#fff", padding: 0 }}>
           {props.header}
-          {/* <PageHeader /> */}
         </Header>
 
         <Content style={{ margin: "24px 16px 0" }}>

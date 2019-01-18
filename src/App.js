@@ -8,9 +8,11 @@ class App extends Component {
     siderStatus: "header"
   };
 
+  // Ini fungsi supaya pada saat lebar layar kurang dari 415px
+  // dan tombol collapsed nya ditekan, maka title{display: none}
   onSiderChange = event => {
-    if (!event) {
-      console.log(event);
+    const screenWidth = window.innerWidth;
+    if (!event && screenWidth < 415) {
       this.setState({
         siderStatus: "smaller-header"
       });
@@ -23,7 +25,6 @@ class App extends Component {
 
   render() {
     const { siderStatus } = this.state;
-    console.log(siderStatus);
     return (
       <MainLayout
         onSiderChange={this.onSiderChange}
