@@ -1,5 +1,18 @@
 .header {
   text-align: center;
-  line-height: 0.5;
+  line-height: 0.3;
   margin-top: 18px;
+}
+
+.smaller-header {
+  display: none;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 16px;
 }

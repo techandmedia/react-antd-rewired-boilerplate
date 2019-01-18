@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function PageHeader() {
+export default function PageHeader({siderStatus}) {
   return (
-    <div className='header'>
-      <h1>Eko Andri Subarnanto</h1>
-      <p>Super Keren</p>
+    <div className={siderStatus}>
+      <p className="title">Eko Andri Subarnanto</p>
+      <p className="sub-title">Super Keren</p>
     </div>
   );
 }

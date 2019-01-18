@@ -11,10 +11,11 @@ export default function MainLayout(props) {
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={broken => {
-          console.log("broken",broken);
+          console.log("broken", broken);
         }}
         onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
+          props.onSiderChange(collapsed);
+          console.log("cc", collapsed, type);
         }}
       >
         <div className="logo" />
